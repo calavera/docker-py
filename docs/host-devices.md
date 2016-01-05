@@ -12,7 +12,7 @@ cli.create_container(
 )
 ```
 
-Each string is a single mapping using the colon (':') as the separator. So the
-above example essentially allow the container to have read write permissions to
-access the host's /dev/sda via a node named /dev/xvda in the container. The
-devices parameter is a list to allow multiple devices to be mapped.
+Each string is a single mapping using the following format:
+`<path_on_host>:<path_in_container>:<cgroup_permissions>`
+The above example allows the container to have read-write access to
+the host's `/dev/sda` via a node named `/dev/xvda` inside the container.
