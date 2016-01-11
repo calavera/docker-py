@@ -54,10 +54,11 @@ def create_ipam_pool(subnet=None, iprange=None, gateway=None,
     }
 
 
-def create_ipam_config(driver='default', pool_configs=None):
+def create_ipam_config(driver='default', pool_configs=None, options=None):
     return {
         'driver': driver,
-        'config': pool_configs or []
+        'config': pool_configs or [],
+        'options': options
     }
 
 
